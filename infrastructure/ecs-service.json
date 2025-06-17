@@ -1,0 +1,28 @@
+{
+  "serviceName": "my-web-service",
+  "cluster": "develop-cluster",
+  "taskDefinition": "my-app-task",
+  "loadBalancers": [
+    {
+      "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:12345678****:targetgroup/my-targets/1234567******",
+      "containerName": "app-container",
+      "containerPort": 80
+    }
+  ],
+  "desiredCount": 2,
+  "launchType": "FARGATE",
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": ["subnet-123***", "subnet-abcdef"],
+      "securityGroups": ["sg-123456*****"],
+      "assignPublicIp": "ENABLED"
+    }
+  },
+  "healthCheckGracePeriodSeconds": 60,
+  "deploymentConfiguration": {
+    "maximumPercent": 200,
+    "minimumHealthyPercent": 50
+  },
+  "enableECSManagedTags": true,
+  "propagateTags": "SERVICE"
+}
