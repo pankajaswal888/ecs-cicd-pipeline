@@ -3,17 +3,17 @@
 This project implements a complete CI/CD pipeline using GitHub Actions to automatically build, test, and deploy a containerized application to AWS Elastic Container Service (ECS).
 
 Features
-🚀 Automated deployments on push to main branch
+* Automated deployments on push to main branch
 
-🔐 Secure credentials management using GitHub Secrets
+* Secure credentials management using GitHub Secrets
 
-🐳 Docker container building and pushing to ECR
+* Docker container building and pushing to ECR
 
-🔄 Zero-downtime deployments with ECS
+* Zero-downtime deployments with ECS
 
-📊 Rollback capability on deployment failures
+* Rollback capability on deployment failures
 
-🔍 Integrated logging via CloudWatch
+* Integrated logging via CloudWatch
 
 
 **Prerequisites**
@@ -104,3 +104,4 @@ GitHub Actions logs in your repository
 ECS Service Events in AWS Console
 
 CloudWatch Logs for application logs
+
